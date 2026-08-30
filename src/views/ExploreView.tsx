@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Compass, Sparkles, Orbit, Activity, Layers } from 'lucide-react';
+import { Compass, Sparkles, Orbit, Layers } from 'lucide-react';
 import { PlanetaryOrbitalCanvas } from '../components/live-experiences/PlanetaryOrbitalCanvas';
 import { ProjectileMotionCanvas } from '../components/live-experiences/ProjectileMotionCanvas';
 import { FunctionTransformerCanvas } from '../components/live-experiences/FunctionTransformerCanvas';
@@ -71,23 +71,13 @@ export const ExploreView: React.FC<ExploreViewProps> = ({ initialScrollTarget })
 
       {/* 2. ESCENA: PROYECTILES */}
       <section className="space-y-4">
-        <div className="border-b border-[#E5E5E5] pb-2">
-          <span className="text-[10px] uppercase tracking-widest font-bold text-[#888888] font-mono block">
-            Física en Movimiento
-          </span>
-        </div>
-
         <div ref={projectileRef} className="space-y-2.5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Activity className="w-4 h-4 text-[#1A1A1A]" />
               <h3 className="text-lg font-medium text-[#1A1A1A] tracking-tight">
-                ¿Hasta dónde puedes llegar? — Proyectiles y la parábola en vuelo
+                ¿Hasta dónde puedes llegar?
               </h3>
             </div>
-            <span className="text-[11px] font-mono text-[#777777]">
-              Arrastra la flecha o pulsa Lanzar
-            </span>
           </div>
 
           <ProjectileMotionCanvas />
