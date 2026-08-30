@@ -9,8 +9,7 @@ import {
   ArrowRight, 
   User, 
   ArrowUpRight, 
-  Compass, 
-  Activity
+  Compass
 } from 'lucide-react';
 
 interface HomeViewProps {
@@ -76,20 +75,11 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
       </section>
 
       {/* 2. RECURSO INTERACTIVO EN VIVO: Lanzamiento Parabólico Manipulable */}
-      <section className="space-y-6 text-left">
+      <section className="space-y-3 text-left">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#E5E5E5] pb-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-[10px] uppercase tracking-widest font-bold text-[#888888] font-mono block">
-                Física en Movimiento · Simulación Interactiva
-              </span>
-              <span className="px-2 py-0.5 bg-[#1A1A1A] text-white text-[9px] font-mono uppercase">
-                En vivo
-              </span>
-            </div>
             <h2 className="text-2xl sm:text-3xl font-light tracking-tight text-[#1A1A1A] flex items-center gap-2">
-              <Activity className="w-6 h-6 text-[#1A1A1A]" />
-              <span>¿Hasta dónde puedes llegar? — Proyectiles y la parábola en vuelo</span>
+              <span>¿Hasta dónde puedes llegar?</span>
             </h2>
           </div>
 
@@ -104,10 +94,6 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
             </button>
           </div>
         </div>
-
-        <p className="text-xs sm:text-sm text-[#666666] max-w-3xl font-sans">
-          Experimenta directamente con el ángulo de tiro, la velocidad inicial y la resistencia del aire. Arrastra el vector sobre el cañón o la diana sobre el terreno para poner a prueba tus cálculos de cinemática parabólica en tiempo real.
-        </p>
 
         {/* Live Projectile Motion Simulator */}
         <div className="pt-1">
