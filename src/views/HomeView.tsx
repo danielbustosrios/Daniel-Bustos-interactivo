@@ -5,9 +5,6 @@ import { teacherProfileData } from '../data/profile';
 import { ProjectileMotionCanvas } from '../components/live-experiences/ProjectileMotionCanvas';
 import { 
   BookOpen, 
-  FolderKanban, 
-  ArrowRight, 
-  User, 
   ArrowUpRight, 
   Compass
 } from 'lucide-react';
@@ -101,82 +98,6 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 3. SPACES OVERVIEW: Cuadrícula con los 4 espacios de exploración (Debajo de la simulación) */}
-      <section className="space-y-6 text-left">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-[#E5E5E5] pb-4">
-          <div>
-            <span className="text-[10px] uppercase tracking-widest font-bold text-[#888888] block mb-1">
-              Estructura
-            </span>
-            <h2 className="text-2xl font-light tracking-tight text-[#1A1A1A]">
-              Espacios de exploración
-            </h2>
-          </div>
-          <p className="text-xs text-[#777777] font-sans max-w-sm">
-            Recursos didácticos, simulaciones interactivas e iniciativas de aula.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-[#E5E5E5] bg-white divide-y sm:divide-y-0 sm:divide-x divide-[#E5E5E5]">
-          {[
-            {
-              id: 'sobre-mi' as SpaceType,
-              title: 'Sobre mí',
-              subtitle: 'Trayectoria & Formación',
-              description: 'Perfil docente, formación académica y fundamentos pedagógicos.',
-              icon: <User className="w-4 h-4 text-[#1A1A1A]" />,
-            },
-            {
-              id: 'explora-experimenta' as SpaceType,
-              title: 'Explora y experimenta',
-              subtitle: 'Simulaciones & Indagación',
-              description: 'Experiencias interactivas de física, astronomía, matemáticas y economía.',
-              icon: <Compass className="w-4 h-4 text-[#1A1A1A]" />,
-            },
-            {
-              id: 'recursos' as SpaceType,
-              title: 'Biblioteca',
-              subtitle: 'Recursos Didácticos',
-              description: 'Guías modulares, explicaciones visuales y materiales de libre acceso.',
-              icon: <BookOpen className="w-4 h-4 text-[#1A1A1A]" />,
-            },
-            {
-              id: 'proyectos' as SpaceType,
-              title: 'Proyectos y experiencias',
-              subtitle: 'Iniciativas de Aula',
-              description: 'Propuestas pedagógicas, experiencias de indagación matemática y proyectos.',
-              icon: <FolderKanban className="w-4 h-4 text-[#1A1A1A]" />,
-            },
-          ].map((space) => (
-            <button
-              key={space.id}
-              type="button"
-              onClick={() => onNavigate(space.id)}
-              className="p-6 sm:p-8 text-left flex flex-col justify-between hover:bg-[#F9F9F9] transition-colors group"
-            >
-              <div>
-                <div className="w-8 h-8 rounded-full bg-[#F9F9F9] border border-[#E5E5E5] flex items-center justify-center mb-5 group-hover:bg-[#1A1A1A] group-hover:text-white transition-colors">
-                  {space.icon}
-                </div>
-                <h3 className="text-base font-medium text-[#1A1A1A] tracking-tight">
-                  {space.title}
-                </h3>
-                <span className="text-[11px] font-mono text-[#888888] block mt-0.5 mb-2">
-                  {space.subtitle}
-                </span>
-                <p className="text-xs text-[#666666] leading-relaxed font-sans">
-                  {space.description}
-                </p>
-              </div>
-
-              <div className="mt-6 pt-3 border-t border-[#EEEEEE] flex items-center justify-between text-xs font-mono text-[#1A1A1A] group-hover:underline">
-                <span>Acceder</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </div>
-            </button>
-          ))}
-        </div>
-      </section>
     </div>
   );
 };
