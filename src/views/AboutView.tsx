@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { SpaceType } from '../types';
 import { teacherProfileData } from '../data/profile';
 import { academicPublicationsData, academicThesesData } from '../data/publications';
@@ -10,6 +10,7 @@ interface AboutViewProps {
 
 export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
   const [isEducationExpanded, setIsEducationExpanded] = useState<boolean>(true);
+  const emotionsDialogRef = useRef<HTMLDialogElement>(null);
 
   return (
     <div className="space-y-16 max-w-4xl mx-auto text-left">
@@ -228,10 +229,11 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
                   <span>Experiencias de aula</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
-                  <div className="p-2.5 bg-white border border-[#E5E5E5] text-xs font-medium text-[#1A1A1A] flex items-center gap-2">
+                  <button type="button" onClick={() => emotionsDialogRef.current?.showModal()} aria-haspopup="dialog" className="p-2.5 bg-white border border-[#E5E5E5] text-xs font-medium text-[#246b73] flex items-center gap-2 text-left hover:bg-[#eef5f3] hover:border-[#246b73] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#246b73] transition-colors">
                     <span className="w-1.5 h-1.5 bg-[#1A1A1A] rounded-full flex-shrink-0" />
-                    <span>Experiencia sumando emociones</span>
-                  </div>
+                    <span>Sumando Emociones</span>
+                    <span className="ml-auto text-[11px] underline underline-offset-2">Visualizar</span>
+                  </button>
                   <div className="p-2.5 bg-white border border-[#E5E5E5] text-xs font-medium text-[#1A1A1A] flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-[#1A1A1A] rounded-full flex-shrink-0" />
                     <span>Observatorio de Datos Educativos CVO</span>
@@ -336,6 +338,16 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
           </div>
         )}
       </section>
+      <dialog ref={emotionsDialogRef} aria-labelledby="sumando-emociones-title" className="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[85dvh] overflow-y-auto rounded-2xl border border-[#E5E5E5] bg-[#faf9f6] p-6 sm:p-8 text-[#333333] shadow-xl backdrop:bg-black/40">
+        <div className="flex items-start justify-between gap-4 mb-6">
+          <h2 id="sumando-emociones-title" className="text-2xl font-semibold text-[#246b73]">Sumando Emociones</h2>
+          <button type="button" autoFocus onClick={() => emotionsDialogRef.current?.close()} className="rounded-lg border border-[#246b73] px-3 py-2 text-sm text-[#246b73] hover:bg-[#eef5f3] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#246b73]">Cerrar</button>
+        </div>
+        <div className="space-y-5 text-base leading-relaxed">
+          <p><strong>Sumando Emociones</strong> es una experiencia liderada desde el área de Matemáticas por los docentes <strong>Derly Katherine Lopez y Daniel Bustos</strong>, que nace al reconocer que aprender matemáticas no depende solamente de comprender contenidos. La confianza, el miedo a equivocarse, la frustración, la persistencia y la forma como cada estudiante enfrenta las dificultades también están presentes en el aula. Por eso integramos el aprendizaje matemático con actividades que permiten trabajar las emociones, el autoconocimiento, el aprendizaje a partir del error y el proyecto de vida.</p>
+          <p>La experiencia también se ha fortalecido mediante diferentes momentos de articulación con <strong>Psicología y la profesional PTA de la institución</strong>, quienes han realizado múltiples intervenciones y acompañamientos con los estudiantes. Además, se han generado espacios con las familias y otras actividades que buscan que los jóvenes no solo desarrollen herramientas para aprender matemáticas, sino también para conocerse, afrontar las dificultades con mayor seguridad y pensar de manera más consciente en su futuro.</p>
+        </div>
+      </dialog>
     </div>
   );
 };
