@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Clock, ShieldCheck, Github, MessageSquare } from 'lucide-react';
-import { teacherProfileData } from '../data/profile';
+import { Send, Clock, ShieldCheck } from 'lucide-react';
 
 export const ContactView: React.FC = () => {
   const [senderName, setSenderName] = useState('');
@@ -32,37 +31,6 @@ export const ContactView: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Information & Channel Status Column */}
         <div className="md:col-span-5 space-y-4">
-          <div className="bg-white border border-[#E5E5E5] p-6 sm:p-7 space-y-5">
-            <h3 className="font-light text-xl text-[#1A1A1A] tracking-tight">
-              Canal de Comunicación
-            </h3>
-
-            {/* Canal Status */}
-            <div className="space-y-1.5 font-mono text-xs">
-              <span className="text-[#888888] text-[10px] uppercase tracking-wider font-bold">Estado de contacto público:</span>
-              <div className="p-3 bg-[#F9F9F9] border border-[#E5E5E5] text-[#555555]">
-                <span>{teacherProfileData.contactChannelStatus}</span>
-              </div>
-            </div>
-
-            {/* Repositorio & Código Abierto */}
-            <div className="space-y-1.5 font-mono text-xs">
-              <span className="text-[#888888] text-[10px] uppercase tracking-wider font-bold">Repositorio & código abierto:</span>
-              <a
-                href={teacherProfileData.githubRepoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between p-3 bg-[#F9F9F9] border border-[#E5E5E5] hover:border-[#1A1A1A] text-[#1A1A1A] transition-colors"
-              >
-                <div className="flex items-center gap-2.5">
-                  <Github className="w-4 h-4 text-[#1A1A1A]" />
-                  <span className="truncate">github.com/tu-usuario</span>
-                </div>
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-
           {/* Attention guidance */}
           <div className="bg-[#F9F9F9] border border-[#E5E5E5] p-5 text-xs text-[#666666] space-y-2">
             <div className="flex items-center gap-2 font-bold text-[#1A1A1A] font-mono uppercase tracking-wider text-[11px]">
@@ -70,7 +38,7 @@ export const ContactView: React.FC = () => {
               <span>Atención y consultas académicas</span>
             </div>
             <p className="leading-relaxed font-sans">
-              Para consultas de aula o asesorías sobre talleres y semilleros, puedes preparar tu mensaje mediante el formulario.
+              Para consultas de aula o asesorías sobre talleres, puedes preparar tu mensaje mediante el formulario.
             </p>
           </div>
 
@@ -88,12 +56,9 @@ export const ContactView: React.FC = () => {
 
         {/* Message Preparer Form */}
         <div className="md:col-span-7 bg-white border border-[#E5E5E5] p-6 sm:p-8">
-          <h3 className="font-light text-2xl text-[#1A1A1A] tracking-tight mb-1">
+          <h3 className="font-light text-2xl text-[#1A1A1A] tracking-tight mb-6">
             Redactar Consulta
           </h3>
-          <p className="text-xs text-[#888888] font-sans mb-6">
-            Estructura tu consulta académica, sugerencia de recurso didáctico o comentario pedagógico.
-          </p>
 
           <form onSubmit={handleSimulateSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
