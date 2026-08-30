@@ -220,16 +220,12 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
 
         {isEducationExpanded && (
           <div className="p-6 border border-[#E5E5E5] bg-white space-y-6">
-            <p className="text-xs sm:text-sm text-[#444444] leading-relaxed font-sans">
-              Espacio que incorpora materiales didácticos, guías curriculares, videos educativos, proyectos de aula y páginas web independientes.
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
               {/* 1. Proyectos de Aula */}
               <div className="p-4 bg-[#FAFAFA] border border-[#EAEAEA] space-y-2.5 md:col-span-2">
                 <div className="flex items-center gap-2 text-xs font-semibold text-[#1A1A1A]">
                   <Layers className="w-4 h-4 text-[#666666]" />
-                  <span>Proyectos de Aula</span>
+                  <span>Experiencias de aula</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
                   <div className="p-2.5 bg-white border border-[#E5E5E5] text-xs font-medium text-[#1A1A1A] flex items-center gap-2">
@@ -247,7 +243,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
               <div className="p-4 bg-[#FAFAFA] border border-[#EAEAEA] space-y-2.5 md:col-span-2">
                 <div className="flex items-center gap-2 text-xs font-semibold text-[#1A1A1A]">
                   <Sparkles className="w-4 h-4 text-[#666666]" />
-                  <span>Páginas Web y Desarrollos Independientes</span>
+                  <span>Páginas web y desarrollos</span>
                 </div>
                 <p className="text-[11px] text-[#777777] leading-relaxed">
                   Módulos web autónomos para divulgación, visualización de datos y comunicación académica.
