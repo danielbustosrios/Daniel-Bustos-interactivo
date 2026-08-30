@@ -1,1 +1,91 @@
 @import "tailwindcss";
+
+:root {
+  --page-ivory: #faf9f6;
+  --accent-teal: #246b73;
+  --accent-teal-hover: #1c555c;
+  --accent-gold: #e9b949;
+  --accent-soft: #eef5f3;
+}
+
+/* Color is limited to the page shell and navigation, not the simulations. */
+body,
+#root > div.min-h-screen {
+  background-color: var(--page-ivory);
+}
+
+::selection {
+  background-color: var(--accent-teal);
+  color: #fff;
+}
+
+#root > div.min-h-screen::selection {
+  background-color: var(--accent-teal);
+}
+
+header.sticky {
+  background-color: rgb(250 249 246 / 96%);
+  border-bottom-color: #e3e7df;
+}
+
+header.sticky nav button:hover,
+header.sticky nav button.border-b-2 {
+  color: var(--accent-teal);
+  border-bottom-color: var(--accent-teal);
+}
+
+header.sticky > div > div > div {
+  background-color: var(--accent-soft);
+  border-color: #dbe8e3;
+}
+
+header.sticky > div > div > div > span.rounded-full {
+  background-color: var(--accent-gold);
+}
+
+header.sticky > div.border-t button[class~="bg-[#1A1A1A]"] {
+  background-color: var(--accent-teal);
+}
+
+/* Introductory buttons and quote on the home page. */
+main > div > section.pt-2 blockquote {
+  border-left-color: var(--accent-gold);
+}
+
+main > div > section.pt-2 button[class~="bg-[#1A1A1A]"] {
+  background-color: var(--accent-teal);
+}
+
+main > div > section.pt-2 button[class~="bg-[#1A1A1A]"]:hover {
+  background-color: var(--accent-teal-hover);
+}
+
+main > div > section.pt-2 button[class~="bg-white"] {
+  color: var(--accent-teal);
+  border-color: #c9deda;
+}
+
+main > div > section.pt-2 button[class~="bg-white"]:hover {
+  background-color: var(--accent-soft);
+}
+
+main > div > section.pt-2 button[class~="bg-white"] svg,
+main > div > section > div.border-b > div > button {
+  color: var(--accent-teal);
+}
+
+main a,
+footer a {
+  color: var(--accent-teal);
+}
+
+main a:hover,
+footer a:hover {
+  color: var(--accent-teal-hover);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 3px;
+}
