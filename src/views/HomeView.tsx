@@ -98,6 +98,22 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
         </div>
       </section>
 
+      <figure className="relative ml-auto w-full max-w-[620px] -mb-28" aria-label="Ilustración del patio de la institución">
+        <img
+          src={new URL('../../assets/Captura de pantalla 2026-08-30 125707.png', import.meta.url).href}
+          alt="Daniel sentado en el patio de la institución, en una ilustración 3D."
+          width={1088}
+          height={550}
+          loading="lazy"
+          decoding="async"
+          className="block w-full h-auto"
+          style={{
+            maskImage: 'radial-gradient(ellipse 70% 75% at 55% 48%, black 42%, transparent 72%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 75% at 55% 48%, black 42%, transparent 72%)',
+          }}
+        />
+      </figure>
+
     </div>
   );
 };
