@@ -8,10 +8,10 @@ export const ProjectsView: React.FC = () => {
       {/* Header */}
       <header className="space-y-3 border-b border-[#E5E5E5] pb-8">
         <span className="text-[10px] uppercase tracking-widest font-bold text-[#888888] font-mono block">
-          Espacio Pedagógico • Sala de Proyectos
+          Espacio Pedagógico • Proyectos y experiencias
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-light text-[#1A1A1A] tracking-tight">
-          Sala de Proyectos & Semilleros
+          Proyectos y experiencias
         </h1>
         <p className="text-sm sm:text-base text-[#666666] leading-relaxed max-w-3xl font-sans">
           Iniciativas pedagógicas, semilleros de investigación escolar y bancos de recursos interactivos desarrollados en el aula. Cada proyecto documenta metodología, estado y enlaces para réplica o adaptación en otros contextos educativos.
