@@ -1,0 +1,7 @@
+{
+  "name": "Espacio Educativo — Daniel Bustos",
+  "description": "Plataforma personal y educativa con recursos, simulaciones interactivas y exploración matemática inspirada en pedagogías activas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
