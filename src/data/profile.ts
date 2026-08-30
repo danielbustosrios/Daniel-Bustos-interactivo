@@ -8,7 +8,7 @@ export const teacherProfileData: TeacherProfile = {
   institutionNote: "Este sitio web es un espacio pedagógico, académico y de divulgación personal creado por Daniel Bustos. No constituye la página oficial ni el canal administrativo formal de la institución educativa.",
   bioParagraphs: [
     "Soy un apasionado por las matemáticas, el desarrollo de pensamiento lógico matemático abstracto, en todos los niveles educativos. Me encanta aprender cosas nuevas, así como el desarrollo y aplicación de herramientas educativas.",
-    "He trabajado como docente investigador en la Universidad del Tolima, en la Universidad Nacional Abierta y a Distancia (UNAD), en la Universidade Federal do Ceará (Brasil) y en la Universidade Federal do Rio Grande do Sul (Brasil). Mi trayectoria abarca la docencia en colegios privados y actualmente trabajo en la Institución Educativa Carlos Vieco Ortiz.",
+    "Mi trayectoria abarca la docencia y la investigación en colegios públicos y privados. En el ámbito universitario, he trabajado como docente e investigador en la Universidad del Tolima, en la Universidad Nacional Abierta y a Distancia, en la Universidade Federal do Ceará (Brasil) y en la Universidade Federal do Rio Grande do Sul (Brasil). Actualmente me encuentro vinculado a la Institución Educativa Carlos Vieco Ortiz, ubicada en la reconocida Comuna 13 de la ciudad de Medellín.",
     "En este espacio comparto recursos, explicaciones y experiencias interactivas para acercarnos a las matemáticas desde la curiosidad y la experimentación."
   ],
   degrees: [
