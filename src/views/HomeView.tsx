@@ -49,11 +49,11 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
               </button>
               <button
                 type="button"
-                onClick={() => onNavigate('recursos')}
+                onClick={() => onNavigate('laboratorio')}
                 className="border border-[#E5E5E5] bg-white text-[#1A1A1A] px-6 sm:px-7 py-3.5 sm:py-4 text-xs sm:text-sm font-medium tracking-wide hover:bg-[#F9F9F9] transition-colors flex items-center gap-2"
               >
                 <BookOpen className="w-4 h-4 text-[#666666]" />
-                <span>Ver Biblioteca</span>
+                <span>Ver cursos</span>
               </button>
             </div>
 
