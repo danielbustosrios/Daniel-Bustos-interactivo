@@ -16,7 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentSpace, onNavigate }) => {
     { id: 'explora-experimenta', label: 'Explora y experimenta', metaphor: 'Simulaciones', icon: <Compass className="w-3.5 h-3.5" /> },
     { id: 'recursos', label: 'Biblioteca', metaphor: 'Recursos', icon: <BookOpen className="w-3.5 h-3.5" /> },
     { id: 'laboratorio', label: 'Laboratorio', metaphor: 'Modelos', icon: <FlaskConical className="w-3.5 h-3.5" /> },
-    { id: 'proyectos', label: 'Proyectos', metaphor: 'Iniciativas', icon: <FolderKanban className="w-3.5 h-3.5" /> },
+    { id: 'proyectos', label: 'Proyectos y experiencias', metaphor: 'Iniciativas', icon: <FolderKanban className="w-3.5 h-3.5" /> },
     { id: 'contacto', label: 'Contacto', metaphor: 'Buzón', icon: <Mail className="w-3.5 h-3.5" /> },
   ];
 
