@@ -74,13 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentSpace, onNavigate }) => {
         </nav>
 
         {/* Action Controls & Mobile Toggle */}
-        <div className="flex items-center gap-3">
-          {/* Institutional note pill */}
-          <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-[#F9F9F9] border border-[#E5E5E5] text-[11px] font-mono text-[#666666]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#1A1A1A]" />
-            <span>I.E. Carlos Vieco Ortiz</span>
-          </div>
-
+        <div className="flex md:hidden items-center gap-3">
           {/* Mobile Menu Button */}
           <button
             type="button"
