@@ -46,8 +46,6 @@ export const ExploreView: React.FC<ExploreViewProps> = ({ initialScrollTarget })
           <span className="bg-[#F5F5F5] px-2.5 py-1 border border-[#E0E0E0] text-[#1A1A1A] font-semibold">
             Principio central: Primero ver, después tocar y finalmente comprender.
           </span>
-          <span className="hidden sm:inline text-[#AAAAAA]">•</span>
-          <span>Sin barreras ni formularios previos: la exploración inicia directamente en pantalla.</span>
         </div>
       </header>
 
