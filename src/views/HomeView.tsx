@@ -142,7 +142,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
             },
             {
               id: 'proyectos' as SpaceType,
-              title: 'Proyectos',
+              title: 'Proyectos y experiencias',
               subtitle: 'Iniciativas de Aula',
               description: 'Propuestas pedagógicas, experiencias de indagación matemática y proyectos.',
               icon: <FolderKanban className="w-4 h-4 text-[#1A1A1A]" />,
