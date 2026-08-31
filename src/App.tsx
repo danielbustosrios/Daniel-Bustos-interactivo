@@ -4,7 +4,6 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomeView } from './views/HomeView';
 import { AboutView } from './views/AboutView';
-import { ResourcesView } from './views/ResourcesView';
 import { ExploreView } from './views/ExploreView';
 import { LabView } from './views/LabView';
 import { ProjectsView } from './views/ProjectsView';
@@ -21,7 +20,6 @@ export default function App() {
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '');
       if (
-        hash === 'recursos' || 
         hash === 'sobre-mi' || 
         hash === 'explora-experimenta' ||
         hash === 'laboratorio' || 
@@ -30,6 +28,9 @@ export default function App() {
         hash === 'inicio'
       ) {
         setCurrentSpace(hash as SpaceType);
+      } else if (hash === 'recursos') {
+        setCurrentSpace('inicio');
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
       } else if (hash === 'cuanto-cuesta-hoy') {
         setCurrentSpace('explora-experimenta');
       } else if (hash === 'poincare-guide') {
@@ -74,9 +75,6 @@ export default function App() {
         )}
         {currentSpace === 'explora-experimenta' && (
           <ExploreView />
-        )}
-        {currentSpace === 'recursos' && (
-          <ResourcesView onOpenResource={handleOpenResource} />
         )}
         {currentSpace === 'laboratorio' && (
           <LabView />

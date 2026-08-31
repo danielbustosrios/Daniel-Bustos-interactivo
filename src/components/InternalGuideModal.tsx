@@ -23,7 +23,7 @@ export const InternalGuideModal: React.FC<InternalGuideModalProps> = ({ resource
             className="inline-flex items-center gap-2 text-xs font-mono font-medium text-[#1A1A1A] hover:text-[#555555] p-1 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Volver a la Biblioteca</span>
+            <span>Cerrar guía</span>
           </button>
 
           <div className="flex items-center gap-3">

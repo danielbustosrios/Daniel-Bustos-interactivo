@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SpaceType } from '../types';
-import { BookOpen, FlaskConical, FolderKanban, User, Mail, Home, Menu, X, Compass } from 'lucide-react';
+import { FlaskConical, FolderKanban, User, Mail, Home, Menu, X, Compass } from 'lucide-react';
 
 interface NavbarProps {
   currentSpace: SpaceType;
@@ -15,7 +15,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentSpace, onNavigate }) => {
     { id: 'sobre-mi', label: 'Sobre mí', metaphor: 'Trayectoria', icon: <User className="w-3.5 h-3.5" /> },
     { id: 'explora-experimenta', label: 'Explora y experimenta', metaphor: 'Simulaciones', icon: <Compass className="w-3.5 h-3.5" /> },
     { id: 'laboratorio', label: 'Laboratorio', metaphor: 'Modelos', icon: <FlaskConical className="w-3.5 h-3.5" /> },
-    { id: 'recursos', label: 'Biblioteca', metaphor: 'Recursos', icon: <BookOpen className="w-3.5 h-3.5" /> },
     { id: 'contacto', label: 'Contacto', metaphor: 'Buzón', icon: <Mail className="w-3.5 h-3.5" /> },
   ];
 

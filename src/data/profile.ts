@@ -42,7 +42,7 @@ export const teacherProfileData: TeacherProfile = {
     },
     {
       title: "Estructura Modular",
-      description: "Contenidos organizados en espacios independientes: Biblioteca (recursos), Laboratorio (simulaciones) e Investigación.",
+      description: "Contenidos organizados en espacios independientes: Explora y experimenta (simulaciones) y Laboratorio (cursos).",
       icon: "BookOpen"
     },
     {
