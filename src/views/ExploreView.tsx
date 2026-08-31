@@ -1,28 +1,19 @@
-import React, { useRef, useEffect } from 'react';
-import { Compass, Sparkles, Orbit, Layers } from 'lucide-react';
+import React, { useRef } from 'react';
+import { Compass, Orbit, Layers } from 'lucide-react';
 import { PlanetaryOrbitalCanvas } from '../components/live-experiences/PlanetaryOrbitalCanvas';
 import { ProjectileMotionCanvas } from '../components/live-experiences/ProjectileMotionCanvas';
 import { FunctionTransformerCanvas } from '../components/live-experiences/FunctionTransformerCanvas';
-import { DollarTimelineExperience } from '../components/live-experiences/DollarTimelineExperience';
 import { TrigonometricTourCanvas } from '../components/live-experiences/TrigonometricTourCanvas';
 
 interface ExploreViewProps {
   initialScrollTarget?: string | null;
 }
 
-export const ExploreView: React.FC<ExploreViewProps> = ({ initialScrollTarget }) => {
-  const dollarRef = useRef<HTMLDivElement>(null);
+export const ExploreView: React.FC<ExploreViewProps> = () => {
   const planetsRef = useRef<HTMLDivElement>(null);
   const projectileRef = useRef<HTMLDivElement>(null);
   const trigRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (initialScrollTarget === 'cuanto-cuesta-hoy' || window.location.hash === '#cuanto-cuesta-hoy') {
-      setTimeout(() => {
-        dollarRef.current?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  }, [initialScrollTarget]);
 
   return (
     <div className="space-y-16 max-w-6xl mx-auto text-left">
@@ -107,22 +98,6 @@ export const ExploreView: React.FC<ExploreViewProps> = ({ initialScrollTarget })
           <FunctionTransformerCanvas />
         </div>
 
-        {/* Módulo D: El Dólar en Colombia (Ancho completo) */}
-        <div ref={dollarRef} className="space-y-2.5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#1A1A1A]" />
-              <h3 className="text-lg font-medium text-[#1A1A1A] tracking-tight">
-                El Dólar: Línea de tiempo interactiva
-              </h3>
-            </div>
-            <span className="text-[11px] font-mono text-[#777777]">
-              Recorre la curva con el cursor o el dedo
-            </span>
-          </div>
-
-          <DollarTimelineExperience />
-        </div>
       </section>
 
       {/* 4. EXPERIENCIA VIVA: TOUR TRIGONOMÉTRICO */}
