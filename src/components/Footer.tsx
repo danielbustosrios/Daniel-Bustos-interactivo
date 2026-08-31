@@ -1,13 +1,8 @@
 import React from 'react';
-import { SpaceType } from '../types';
-import { ShieldCheck } from 'lucide-react';
+import { Mail, ShieldCheck } from 'lucide-react';
 import { teacherProfileData } from '../data/profile';
 
-interface FooterProps {
-  onNavigate: (space: SpaceType) => void;
-}
-
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC = () => {
   return (
     <footer className="w-full border-t border-[#E5E5E5] bg-[#FFFFFF] mt-24">
       {/* Institutional Context & Contact */}
@@ -26,14 +21,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
-            <button
-              type="button"
-              onClick={() => onNavigate('contacto')}
-              className="px-4 py-2 bg-[#1A1A1A] text-white hover:bg-[#333333] text-xs font-mono transition-colors"
+          <div className="min-w-0 max-w-full space-y-2 text-left">
+            <p className="text-xs text-[#777777]">Correo institucional</p>
+            <a
+              href="mailto:daniel.bustos.rios@carlosvieco.edu.co"
+              className="inline-flex max-w-full items-start gap-2 text-sm text-[#246b73] underline underline-offset-4 hover:text-[#1A1A1A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
             >
-              Contacto
-            </button>
+              <Mail aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
+              <span className="break-all">daniel.bustos.rios@carlosvieco.edu.co</span>
+            </a>
           </div>
         </div>
       </div>

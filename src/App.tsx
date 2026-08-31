@@ -7,7 +7,6 @@ import { AboutView } from './views/AboutView';
 import { ExploreView } from './views/ExploreView';
 import { LabView } from './views/LabView';
 import { ProjectsView } from './views/ProjectsView';
-import { ContactView } from './views/ContactView';
 import { InternalGuideModal } from './components/InternalGuideModal';
 import { educationalResourcesData } from './data/resources';
 
@@ -24,11 +23,10 @@ export default function App() {
         hash === 'explora-experimenta' ||
         hash === 'laboratorio' || 
         hash === 'proyectos' || 
-        hash === 'contacto' || 
         hash === 'inicio'
       ) {
         setCurrentSpace(hash as SpaceType);
-      } else if (hash === 'recursos') {
+      } else if (hash === 'recursos' || hash === 'contacto') {
         setCurrentSpace('inicio');
         window.history.replaceState(null, '', window.location.pathname + window.location.search);
       } else if (hash === 'cuanto-cuesta-hoy') {
@@ -82,9 +80,6 @@ export default function App() {
         {currentSpace === 'proyectos' && (
           <ProjectsView />
         )}
-        {currentSpace === 'contacto' && (
-          <ContactView />
-        )}
       </main>
 
       {/* Article / Interactive Guide Modal */}
@@ -93,7 +88,7 @@ export default function App() {
       )}
 
       {/* Persistent Pedagogical Footer */}
-      <Footer onNavigate={handleNavigate} />
+      <Footer />
     </div>
   );
 }
