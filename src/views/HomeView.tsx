@@ -57,11 +57,6 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
               </button>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-[#EEEEEE]">
-              <p className="text-[11px] text-[#888888] font-mono">
-                {teacherProfileData.institution} • Espacio educativo de libre acceso
-              </p>
-            </div>
           </div>
 
           {/* Right Column: Poincaré Disk Visual */}
